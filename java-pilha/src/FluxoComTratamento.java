@@ -6,7 +6,7 @@ public class FluxoComTratamento {
         System.out.println("Ini do main");
         try {
         	metodo1();
-        } catch(ArithmeticException | NullPointerException | MinhaExcecao e) {
+        } catch(ArithmeticException | NullPointerException e) {
         	String msg =  e.getMessage();
         	System.out.println("Exception " + msg);
         	e.printStackTrace();
@@ -22,10 +22,8 @@ public class FluxoComTratamento {
 
     private static void metodo2() {
         System.out.println("Ini do metodo2");
-        
-        throw new MinhaExcecao("Deu muito errado!");
-        
-        //System.out.println("Fim do metodo2");
+        metodo2();
+        System.out.println("Fim do metodo2");
     }
 	
 }
